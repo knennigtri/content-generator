@@ -25,6 +25,7 @@ const DEFAULT_OUTPUT = {
     COURSE_WEBSITE_AGENDA: "output/course-website-agenda.md",
     SLIDE_CONTENT: "output/slide-titles-and-initial-content.md"
 };
+const OUTPUT_DIR = "tools/content-generator";
 
 const OUT_FMT = {
     COURSE_H: "#",
@@ -101,11 +102,11 @@ function parseArgs() {
 
     const inputGuide = args[0] || DEFAULT_INPUT.GUIDE;
     const inputSlideContent = args[1] || DEFAULT_INPUT.SLIDE_CONTENT;
-    const outputSlides = args[2] || path.join(path.dirname(inputSlideContent), DEFAULT_OUTPUT.SLIDE_CONTENT);
-    const outputGuideOutline = args[3] || path.join(path.dirname(inputSlideContent), DEFAULT_OUTPUT.COURSE_OUTLINE);
-    const outputSlidesContentWithTitles = args[4] || path.join(path.dirname(inputSlideContent), DEFAULT_OUTPUT.COURSE_OUTLINE_WITH_TOPICS);
-    const outputCourseWebsiteTopics = args[5] || path.join(path.dirname(inputSlideContent), DEFAULT_OUTPUT.COURSE_WEBSITE_TOPICS);
-    const outputCourseWebsiteAgenda = args[6] || path.join(path.dirname(inputSlideContent), DEFAULT_OUTPUT.COURSE_WEBSITE_AGENDA);
+    const outputSlides = args[2] || path.join(OUTPUT_DIR, DEFAULT_OUTPUT.SLIDE_CONTENT);
+    const outputGuideOutline = args[3] || path.join(OUTPUT_DIR, DEFAULT_OUTPUT.COURSE_OUTLINE);
+    const outputSlidesContentWithTitles = args[4] || path.join(OUTPUT_DIR, DEFAULT_OUTPUT.COURSE_OUTLINE_WITH_TOPICS);
+    const outputCourseWebsiteTopics = args[5] || path.join(OUTPUT_DIR, DEFAULT_OUTPUT.COURSE_WEBSITE_TOPICS);
+    const outputCourseWebsiteAgenda = args[6] || path.join(OUTPUT_DIR, DEFAULT_OUTPUT.COURSE_WEBSITE_AGENDA);
     
     return {
         inputGuide: inputGuide,
