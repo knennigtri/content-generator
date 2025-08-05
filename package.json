@@ -1,0 +1,15 @@
+{
+    "name": "content-generator",
+    "version": "1.0.0",
+    "description": "Content generator for course development",
+    "main": "generator.js",
+    "bin": {
+      "content-generator": "./generator.js"
+    },
+    "scripts": {
+      "start": "node generator.js"
+    },
+    "keywords": ["content", "generator", "course"],
+    "author": "knennigtri",
+    "license": "MIT"
+  }
